@@ -20,8 +20,9 @@ jobs:
 
       - name: 安装 Android SDK
         uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
-      # 关键改动：强制使用指定的稳定版 Gradle，避免默认使用不兼容的最新版
       - name: 安装并指定 Gradle 版本
         uses: gradle/actions/setup-gradle@v4
         with:
